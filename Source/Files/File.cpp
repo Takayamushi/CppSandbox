@@ -46,14 +46,14 @@ std::string File::ReadLine(int lineIndex)
 
 void File::Write(const char* str)
 {
-    OpenOstream(std::ios_base::trunc | std::ios_base::binary);
+    OpenOstream(std::ios_base::out | std::ios_base::trunc | std::ios_base::binary);
     WriteToOstream(str);
     CloseOstream();
 }
 
 void File::WriteLine(const char* str)
 {
-    OpenOstream(std::ios_base::app | std::ios_base::binary);
+    OpenOstream(std::ios_base::out | std::ios_base::app | std::ios_base::binary);
     WriteToOstream(str);
     CloseOstream();
 }
