@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <algorithm>
-#include "BasicTypes.h"
+#include "Types/BasicTypes.h"
 
 template<class T>
 class Vector
