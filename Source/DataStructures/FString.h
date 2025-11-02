@@ -20,9 +20,12 @@ public:
     
     int Length() const { return length; }
     void Print() const;
+
+    void ToUpper();
+    void ToLower();
     
 private:
-    const char* string = nullptr;
+    char* string = nullptr;
     int length = 0;
 };
 

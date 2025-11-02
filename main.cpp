@@ -17,8 +17,12 @@ int main()
     // file.Write("Hello World.\n");
     // std::cout << file.Read() << "\n";
 
-    Path path;
-    path.GetDirectoryEntries();
+    FString string = "Hello World";
+    std::cout << string << "\n";
+    string.ToUpper();
+    std::cout << string << "\n";
+    string.ToLower();
+    std::cout << string << "\n";
     
     return 0;
 }
