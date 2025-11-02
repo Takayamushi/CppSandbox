@@ -53,3 +53,20 @@ void FString::ToLower()
         }
     }
 }
+
+uint32 FString::GetWordCount(const FString& str)
+{
+    //Bugs:
+    // - An extra word is added when there are trailing spaces
+    uint32 spaceCount = 0;
+    for (int i = 0; i < str.Length(); i++)
+    {
+        if (str[i] == ' ')
+        {
+            if (i == 0 && str[i - 1] == ' ')
+                continue;
+            spaceCount++;
+        }
+    }
+    return spaceCount + 1;
+}

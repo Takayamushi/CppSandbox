@@ -1,6 +1,8 @@
 #pragma once
 #include <ostream>
 
+#include "Types/BasicTypes.h"
+
 class FString
 {
 public:
@@ -23,10 +25,12 @@ public:
 
     void ToUpper();
     void ToLower();
+
+    static uint32 GetWordCount(const FString& str);
     
 private:
     char* string = nullptr;
-    int length = 0;
+    uint32 length = 0;
 };
 
 /* Begin Overload Operators */

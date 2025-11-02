@@ -1,5 +1,18 @@
 #pragma once
 
+enum
+{
+    CHAR_SPACE = 32,
+    CHAR_EXCLAMATION = 33,
+    CHAR_QUOTE = 34,
+    CHAR_NUMBERSIGN = 35,
+    CHAR_DOLLAR = 36,
+    CHAR_PERCENT = 37,
+    CHAR_AMPERSAND = 38,
+    CHAR_SINGLEQUOTE = 39,
+    //TODO Complete..
+};
+
 /********************************************
 0-31 Control Characters
 These characters are unprintable characters used to control peripherals.
