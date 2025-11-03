@@ -19,6 +19,8 @@ public:
 
     //The "friend" keyword allows these operator functions to access private members of FString.
     friend std::ostream& operator<<(std::ostream& os, const FString& str);
+    char* begin() const;
+    char* end() const;
     
     int Length() const { return length; }
     void Print() const;
@@ -27,6 +29,14 @@ public:
     void ToLower();
 
     static uint32 GetWordCount(const FString& str);
+    static uint32 GetVowelCount(const FString& str);
+    static uint32 GetConsonantCount(const FString& str);
+    static FString Reverse(const FString& str);
+    static FString ToLower(const FString& str);
+    static FString ToUpper(const FString& str);
+    static FString RemoveWhitespaces(const FString& str);
+    static bool IsPalindrome(const FString& str);
+    static uint32 FindDuplicates(const FString& str);
     
 private:
     char* string = nullptr;
@@ -63,7 +73,7 @@ inline bool operator==(const FString& my, const FString& other)
     bool sameString = true;
     for (int i = 0; i < my.Length(); i++)
     {
-        if (my[i] != other[i])
+        if (tolower(my[i]) != tolower(other[i]))
         {
             sameString = false;
             break;

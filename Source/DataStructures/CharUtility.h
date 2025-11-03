@@ -64,3 +64,20 @@ These characters are unprintable characters used to control peripherals.
 126 - ~
 127 - DELETE
 **************************************/
+
+static bool IsVowel(char c)
+{
+    return
+    c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'y' ||
+    c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || c == 'Y';
+}
+
+static bool IsLetter(char c)
+{
+    return c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z';
+}
+
+static bool IsConsonant(char c)
+{
+    return IsLetter(c) && !IsVowel(c);
+}
